@@ -4,7 +4,16 @@ server:
 spring:
   application:
     name: gateway
-
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        -id: catalog-service
+          uri: lb://catalog-service
+          predicates:
+          - Path=/catalog/**
 
 eureka:
   client:
