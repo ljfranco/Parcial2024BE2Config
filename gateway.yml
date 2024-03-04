@@ -9,7 +9,6 @@ spring:
       discovery:
         locator:
           enabled: true
-    mvc:
       routes:
         - id: catalogRoute
           uri: lb://catalog-service/
