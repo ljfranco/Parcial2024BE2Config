@@ -5,7 +5,7 @@ spring:
     name: movie-service
   cloud:
     config:
-       enabled: false
+      enabled: false
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3366/movie-dev
@@ -16,9 +16,9 @@ spring:
     generate-ddl: true
     show-sql: true
 
-  eureka:
-    instance:
-      instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-      prefer-ip-address: true
-      lease-renewal-interval-in-seconds: 5
-      lease-expiration-duration-in-seconds: 10
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 10
