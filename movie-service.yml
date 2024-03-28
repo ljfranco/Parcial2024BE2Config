@@ -15,6 +15,20 @@ spring:
     hibernate.ddl-auto: update
     generate-ddl: true
     show-sql: true
+  rabbitmq:
+    username: guest
+    password: guest
+    host: localhost
+    port: 5672
+
+queue:
+  movie:
+    name: movieQueue
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
 
 eureka:
   instance:
@@ -22,3 +36,5 @@ eureka:
     prefer-ip-address: true
     lease-renewal-interval-in-seconds: 5
     lease-expiration-duration-in-seconds: 10
+
+
