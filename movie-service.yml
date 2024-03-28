@@ -3,9 +3,6 @@ server:
 spring:
   application:
     name: movie-service
-  cloud:
-    config:
-      enabled: false
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3366/movie-dev
@@ -16,10 +13,10 @@ spring:
     generate-ddl: true
     show-sql: true
   rabbitmq:
-    host: localhost
-    password: guest
-    port: 5672
     username: guest
+    password: guest
+    host: localhost
+    port: 5672
 
 eureka:
   instance:
@@ -28,14 +25,10 @@ eureka:
     lease-renewal-interval-in-seconds: 5
     lease-expiration-duration-in-seconds: 10
 
-
+queue:
+  serie:
+    name: movieQueue
 management:
   tracing:
     sampling:
       probability: 1.0
-
-queue:
-  movie:
-    name: movieQueue
-
-
