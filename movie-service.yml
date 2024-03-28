@@ -26,7 +26,7 @@ eureka:
     lease-expiration-duration-in-seconds: 10
 
 queue:
-  serie:
+  movie:
     name: movieQueue
 management:
   tracing:
